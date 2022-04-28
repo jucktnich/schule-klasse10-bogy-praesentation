@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Präsentation Informatik</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #app {
+            transition: 1s;
+            font-family: sans-serif;
+            background: #f1cb79;
+            width: 100vw;
+            height: 100vh;
+            color: #122149;
+            overflow-y: hidden;
+        }
+        #app.statetwo{
+            transition: 1s;
+            background: #122149;
+            color: #f1cb79;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 50px;
+            font-size: 4em;
+        }
+        #infobox {
+            transition: 1s;
+            background: #122149;
+            color: white;
+            padding: 30px;
+            border-radius: 30px;
+            margin: 50px;
+            font-family: monospace;
+            display: none;
+        }
+        #infobox.stateone {
+            transition: 1s;
+            display: block;
+        }
+        #map {
+            transition: 1s;
+            display: none;
+        }
+        #map.stateone {
+            transition: 1s;
+            margin-top: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #map.statetwo {
+            transition: 1s;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #explanations {
+            padding-left: 2em;
+            padding-right: 2em;
+            margin-top: 100vh;
+        }
+        #explanations.statethree {
+            transition: 1s;
+            margin: 0;
+        }
+        h2 {
+            margin-bottom: 0;
+            margin-top: 50;
+            font-size: 2em;
+        }
+        ul {
+            transition: 1s;
+            margin-top: 0.5em;
+            display: none;
+        }
+        li {
+            font-size: 1.15em;
+        }
+    </style>
+</head>
+<body>
+    <div id="base">
+        <div id="terminal" style="height: 100vh; width: 100vw; background: black; color: white; font-family: monospace; word-break: break-all;">
+            studiinfo@school : 
+        </div>
+        <div id="app" class="stateone" style="display: none;">
+            <h1 id="header" class="stateone">Informatik</h1>
+            <div id="infobox" class="stateone">
+                <span style="color: rgb(112, 163, 213);">const</span> <span style="color: rgb(120, 199, 252);">Informatik_Studium</span> = {<br>
+                    &nbsp;&nbsp;&nbsp;name: "Informatik (Bachelor/Master of Science)",<br>
+                    &nbsp;&nbsp;&nbsp;studyTime: 3,<br>
+                    &nbsp;&nbsp;&nbsp;occupationalFields: ["Software Entwicklung", "Data Science", "KI Entwicklung", "many more"],<br>
+                    &nbsp;&nbsp;&nbsp;approval: "partly needed",<br>
+                    &nbsp;&nbsp;&nbsp;focusOppertunities: {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bachelor: ["KI", "Computer Science", "Kognitive Informatik", "many more"],<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master: ["Angewandte Informatik", "(Applied Research in) Computer Science", "High-Performance- / Quanten-Computing", "KI", "Machine Learning", "many more"]<br>
+                    &nbsp;&nbsp;&nbsp;}<br>
+                }
+            </div>
+            <div id="map" class="stateone">
+                <img style="max-width: 100vw; max-height: calc(100vh - 120px);"src="Untitled.svg">
+            </div>
+            <div id="explanations">
+                <div id="tasks">
+                    <h2>Aufgaben und Ziele</h2>
+                    <ul style="display: block;">
+                        <li>Entwicklung von Software</li>
+                        <li>Qualitätssicherung</li>
+                        <li>Netzwerk-Architektur</li>
+                    </ul>
+                </div>
+                <div id="work">
+                    <h2>Arbeitsort und Arbeitsweise</h2>
+                    <ul>
+                        <li>Ort & Zeit frei wählbar</li>
+                        <li>Typischerweise normaler Büroplatz<br>meist mit mehr (vertikalen) Bildschirmen</li>
+                        <li>keine körperliche Anforderungen</li>
+                    </ul>
+                </div>
+                <div id="activities">
+                    <h2>Tätigkeiten</h2>
+                    <ul>
+                        <li>viel im Team</li>
+                        <li>Programmieren, Netzwerke designen, ...</li>
+                    </ul>
+                </div>
+                <div id="requirements">
+                    <h2>Anforderungen und Vorraussetzungen</h2>
+                    <ul>
+                        <li>Informatik & Mathe</li>
+                        <li>logisches Denken</li>
+                        <li>kreatives Lösen von Problemen</li>
+                        <li>aufbrechen größerer Probleme in kleinere</li>
+                        <li>"Computational Thinking"</li>
+                        <li>im Team arbeiten</li>
+                    </ul>
+                </div>
+                <div id="sunsides">
+                    <h2>Sonnen- und Schattenseiten</h2>
+                    <!--<div>
+                        <div>
+                            <h3 style="text-align: center; display: inline-block;">Sonnenseiten<h3>
+                        </div>
+                        <div>
+                            <h3 style="text-align: center; display: inline-block;">Schattenseiten</h3>
+                        </div>
+                    </div>-->
+                    <ul>
+                        <span style="font-size: 2.5em;">☀️</span>
+                        <li>Spaßfaktor</li>
+                        <li>gutes Gehat</li>
+                        <li>viele Weiterbildungsmöglichkeiten</li>
+                        <li>Zukunftssicherheit</li>
+                        <li>viele coole Unternehmen</li>
+                        <span style="font-size: 2em; margin-top: 1.5em;">🌓</span>
+                        <li>keine körperliche Betätigung</li>
+                    </ul>
+                </div>
+                <div id="related">
+                    <h2>Verwandte Berufe</h2>
+                    <ul>
+                        <li>IT-Sicherheit</li>
+                        <li>IT-Administration</li>
+                        <li>Ingenieursberufe</li>
+                        <li>Elektro- und Informationstechnik</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var startedPresentation = false;
+var terminalText = [" launch-presentation Informatik\n", "Launching presentation", "..."]
+var states = ["stateone", "statetwo", "statethree"];
+var currentState = 1;
+var place = 1;
+
+function startTerminal(i, j) {
+    if (!(j == 0)) {
+        if (terminalText[i].charCodeAt(j - 1) == 32) {
+            document.getElementById("terminal").innerText += " " + terminalText[i][j];
+        } else {
+            document.getElementById("terminal").innerText += terminalText[i][j];
+        }
+    } else {
+        document.getElementById("terminal").innerText += terminalText[i][j];
+    }
+    j++;
+    if (j == terminalText[i].length) {
+        j = 0;
+        i ++;
+    }
+    if (!(i == terminalText.length)) {
+        if (i % 2 === 0) {
+            setTimeout(function() {startTerminal(i, j)}, 100)
+        } else {
+            startTerminal(i, j)
+        }
+    } else {
+        document.getElementById("terminal").style.display = "none"
+        document.getElementById("app").style.display = "block"
+    }
+}
+
+document.getElementById("base").addEventListener("click", () => {
+    if (!startedPresentation) {
+        startedPresentation = true;
+        startTerminal(0, 0)
+    } else {
+        if (currentState < states.length) {
+            let nodes = document.getElementById("app").childNodes;
+        document.getElementById("app").classList.remove(states[currentState - 1]);
+        document.getElementById("app").classList.add(states[currentState]);
+        for (let i = 0; i < nodes.length; i++) {
+            try {
+                nodes[i].classList.remove(states[currentState - 1]);
+                nodes[i].classList.add(states[currentState]);
+            } catch {
+    
+            }
+        }
+        currentState++;
+        } else {
+            let nodes = document.getElementById("explanations").childNodes;
+            console.log(nodes)
+            nodes[place].getElementsByTagName("ul")[0].style.display = "none";
+            nodes[place + 2].getElementsByTagName("ul")[0].style.display = "block";
+            place += 2
+        }
+    }
+})
+    </script>
+</body>
+</html>
