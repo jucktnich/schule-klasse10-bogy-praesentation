@@ -92,14 +92,14 @@
             <h1 id="header" class="stateone">Informatik</h1>
             <div id="infobox" class="stateone">
                 <span style="color: rgb(112, 163, 213);">const</span> <span style="color: rgb(120, 199, 252);">Informatik_Studium</span> = {<br>
-                    &nbsp;&nbsp;&nbsp;name: "Informatik (Bachelor/Master of Science)",<br>
+                    <span id="infoconst"><!--&nbsp;&nbsp;&nbsp;name: "Informatik (Bachelor/Master of Science)",<br>
                     &nbsp;&nbsp;&nbsp;studyTime: 3,<br>
                     &nbsp;&nbsp;&nbsp;occupationalFields: ["Software Entwicklung", "Data Science", "KI Entwicklung", "many more"],<br>
                     &nbsp;&nbsp;&nbsp;approval: "partly needed",<br>
                     &nbsp;&nbsp;&nbsp;focusOppertunities: {<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bachelor: ["KI", "Computer Science", "Kognitive Informatik", "many more"],<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master: ["Angewandte Informatik", "(Applied Research in) Computer Science", "High-Performance- / Quanten-Computing", "KI", "Machine Learning", "many more"]<br>
-                    &nbsp;&nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;&nbsp;}--></span><br>
                 }
             </div>
             <div id="map" class="stateone">
@@ -179,6 +179,8 @@ var terminalText = [" launch-presentation Informatik\n", "Launching presentation
 var states = ["stateone", "statetwo", "statethree"];
 var currentState = 1;
 var place = 1;
+var infoboxCounter = 0;
+var infobox = ['&nbsp;&nbsp;&nbsp;name: "Informatik (Bachelor/Master of Science)"', ',<br>&nbsp;&nbsp;&nbsp;studyTime: 3', ',<br>&nbsp;&nbsp;&nbsp;occupationalFields: ["Software Entwicklung", "Data Science", "KI Entwicklung", "many more"]', ',<br>&nbsp;&nbsp;&nbsp;approval: "partly needed"', ',<br>&nbsp;&nbsp;&nbsp;focusOppertunities: {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bachelor: ["KI", "Computer Science", "Kognitive Informatik", "many more"],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master: ["Angewandte Informatik", "(Applied Research in) Computer Science", "High-Performance- / Quanten-Computing", "KI", "Machine Learning", "many more"]<br>&nbsp;&nbsp;&nbsp;}']
 
 function startTerminal(i, j) {
     if (!(j == 0)) {
@@ -211,6 +213,9 @@ document.getElementById("base").addEventListener("click", () => {
     if (!startedPresentation) {
         startedPresentation = true;
         startTerminal(0, 0)
+    } else if (infoboxCounter < infobox.length) {
+        document.getElementById("infoconst").innerHTML += infobox[infoboxCounter];
+        infoboxCounter++
     } else {
         if (currentState < states.length) {
             let nodes = document.getElementById("app").childNodes;
